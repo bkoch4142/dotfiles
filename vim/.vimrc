@@ -7,7 +7,29 @@ set nu
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Background
 set background=dark
+
+" Window commands
+nnoremap <leader>h :wincmd h<CR> " Alternative way is to map these to Cntrl rather than leader
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR> " Opens file explorer with pv
+set splitbelow " Makes windows open below and not up
+
+" Terminal
+map <leader>tt :vnew terminal<CR>
+
+" Remap arrow keys to resize window
+nnoremap <Up>    :resize -2<CR>
+nnoremap <Down>  :resize +2<CR>
+nnoremap <Left>  :vertical resize -2<CR>
+nnoremap <Right> :vertical resize +2<CR>
+
+" Per default, netrw leaves unmodified buffers open. This autocommand
+" deletes netrw's buffer once it's hidden (using ':q', for example)
+autocmd FileType netrw setl bufhidden=delete
 
 "auto search when typing
 set incsearch
@@ -20,9 +42,6 @@ set ruler
 
 " dont create swap files
 set noswapfile
-
-"color column 80
-set colorcolumn=80
 
 "ignore case when searching
 set ignorecase
@@ -63,9 +82,8 @@ imap jj <Esc>
 "map ReplaceAll to S
 nnoremap S :%s//g<Left><Left>
 
-
 " https://www.youtube.com/watch?v=XA2WjJbmmoM&t=3513s&ab_channel=thoughtbot
-" everything below if from the above link
+" everything below is from the above link
 
 "when looking for a file search for every subdir
 "display all matching files when we tab complete
@@ -79,10 +97,9 @@ set path+=**
 
 "tweeks for browsing
 " now you can:
-"   :edit a folder to open a file browser
+"   :edit folder_name 
 "   <CR>/v/t to open in a h-split/v-split/tab
 "   check |netrw-browse-maps| for more mappings
-"   learn how to switch windows and stuff!!!??
 let g:netrw_banner=0
 let g:netrw_browse_split=4
 let g:netrw_altv=1
@@ -90,4 +107,10 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^|\s\s\)\zs\.\S\+'
 
+"TODO
+"also checkout vim-dirvish (better than netrw)
+"check jupyter vim binding
 "check tpope plugins
+"check fzf
+"check undotree
+"make undodir config
