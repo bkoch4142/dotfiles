@@ -10,11 +10,14 @@ nmap <leader>w :w!<cr>
 " Background
 set background=dark
 
+"Do not create backup files
+set nobackup
+
 " Window commands
-nnoremap <leader>h :wincmd h<CR> " Alternative way is to map these to Cntrl rather than leader
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <C-h> <C-w>h " Remap window change to Ctrl+movement_key
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR> " Opens file explorer with pv
 set splitbelow " Makes windows open below and not up
 
@@ -107,10 +110,4 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^|\s\s\)\zs\.\S\+'
 
-"TODO
-"also checkout vim-dirvish (better than netrw)
-"check jupyter vim binding
-"check tpope plugins
-"check fzf
-"check undotree
-"make undodir config
+
