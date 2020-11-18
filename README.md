@@ -19,12 +19,10 @@ stow vim  #make sure files you stow don't already exist
 - check fzf
 - check undotree
 - make undodir config
-- vifm ( we need to instal this) #see https://www.youtube.com/watch?v=RGOsE3UWqhI&t=706s&ab_channel=DistroTube
-- dracula color
 - lightline
 - python syntax
-- https://draculatheme.com/
 - neovim
+- vimspector https://www.youtube.com/watch?v=AnTX2mtOl9Q&ab_channel=ThePrimeagen
 - coc.nvim
 - https://www.youtube.com/watch?v=gnupOrSEikQ&feature=emb_title&ab_channel=BenAwad
 - learn the c command for editing everything found

@@ -109,5 +109,28 @@ let g:netrw_altv=1
 let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^|\s\s\)\zs\.\S\+'
+let g:netrw_localrmdir='rm -r'
 
 
+" lightline
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'seoul256',
+      \ }
+
+" For Mac/Linux users
+call plug#begin('~/.vim/bundle')
+if empty(glob('~/.vim/autoload/plug.vim'))
+      silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+      autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+Plug 'itchyny/lightline.vim'
+Plug 'morhetz/gruvbox'
+Plug 'vifm/vifm.vim'
+
+call plug#end()
+
+" Colorcheme
+colorscheme gruvbox
