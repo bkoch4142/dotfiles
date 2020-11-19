@@ -26,3 +26,4 @@ stow vim  #make sure files you stow don't already exist
 - coc.nvim
 - https://www.youtube.com/watch?v=gnupOrSEikQ&feature=emb_title&ab_channel=BenAwad
 - learn the c command for editing everything found
+- image view with xterm and vifm
