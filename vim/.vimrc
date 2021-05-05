@@ -9,6 +9,8 @@ nmap <leader>w :w!<cr>
 
 " Background
 set background=dark
+" Makes the colorscheme work in tmux
+" set t_Co=256
 
 "Do not create backup files
 set nobackup
@@ -85,6 +87,10 @@ imap jj <Esc>
 "map ReplaceAll to S
 nnoremap S :%s//g<Left><Left>
 
+" To aid in pasting text from outside vim toggle set paste
+" :set paste
+" :set nopaste
+
 " https://www.youtube.com/watch?v=XA2WjJbmmoM&t=3513s&ab_channel=thoughtbot
 " everything below is from the above link
 
@@ -137,19 +143,21 @@ call plug#end()
 " vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
 
+" Maximizes a vim window 
 nnoremap <leader>m :MaximizerToggle!<CR>
+" Launches Debug
 nnoremap <leader>dd :call vimspector#Launch()<CR>
+" Exites Debug
 nnoremap <leader>de :call vimspector#Reset()<CR>
-
 nnoremap <leader>dtcb :call vimspector#CleanLineBreakpoint()<CR>
-
+" Flow Control commands
 nmap <leader>dl <Plug>VimspectorStepInto
 nmap <leader>dj <Plug>VimspectorStepOver
 nmap <leader>dk <Plug>VimspectorStepOut
 nmap <leader>d_ <Plug>VimspectorRestart
 nnoremap <leader>d<space> :call vimspector#Continue()<CR>
-
 nmap <leader>drc <Plug>VimspectorRunToCursor
+" Breakpoints
 nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
 nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
 
