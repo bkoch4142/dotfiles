@@ -20,6 +20,9 @@ vim
 :VimspectorInstall --enable-python
 ```
 
+## Other
+- if you are on windows terminal disable paste cntrl-v, go to settings and edit settings json, comment out // { "command": "paste", "keys": "ctrl+v" }, <------ THIS LINE
+
 ## TODO
 - also checkout vim-dirvish (better than netrw)
 - check jupyter vim binding
