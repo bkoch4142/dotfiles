@@ -22,6 +22,7 @@ vim
 
 ## Other
 - if you are on windows terminal disable paste cntrl-v, go to settings and edit settings json, comment out // { "command": "paste", "keys": "ctrl+v" }, <------ THIS LINE
+- if colors not showing maybe its bash fault so add: export TERM=xterm-256color
 
 ## TODO
 - also checkout vim-dirvish (better than netrw)

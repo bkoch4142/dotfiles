@@ -133,7 +133,6 @@ unset __conda_setup
 
 
 #My aliases
-alias dell='ssh brando@209.34.233.43 -p 22'
-alias lambda='ssh ubuntu@96.76.203.46'
+export TERM=xterm-256color
 alias tmux="TERM=screen-256color-bce tmux"
 
