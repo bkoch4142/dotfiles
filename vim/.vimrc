@@ -160,6 +160,9 @@ nmap <leader>drc <Plug>VimspectorRunToCursor
 " Breakpoints
 nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
 nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
+" Inspect
+nmap <leader>di <Plug>VimspectorBalloonEval
+xmap <leader>di <Plug>VimspectorBalloonEval
 
 " Colorcheme
 colorscheme gruvbox

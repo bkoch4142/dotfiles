@@ -4,6 +4,9 @@ ZQ #to force quit vim
 ZZ #save and quit vim
 ```
 
+## Tips
+- go to definition `gd`
+
 ## Comment a block of text
 ```
 esc
