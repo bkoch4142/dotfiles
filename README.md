@@ -12,6 +12,10 @@ cd dotfiles
 stow vim  #make sure files you stow don't already exist
 ```
 
+# IPython trick 
+Put this on the line on which you want to pause and open interactive mode (https://www.youtube.com/watch?v=G3pOvrKkFuk)
+`import IPython ; IPython.embed() ; exit(1)`
+
 ## TODO
 - also checkout vim-dirvish (better than netrw)
 - check jupyter vim binding
