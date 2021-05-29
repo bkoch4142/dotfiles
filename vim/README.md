@@ -101,6 +101,8 @@ Every command starts with 'd' (meaning debug), the following letters hint to act
 |`,dbp` | Toggle Breakpoint  |
 |`,di` | Inspect Variable  |
 
+To add variable to watch: go to watch window, go into insert mode and type the name of the variable and hit enter
+
 
 
 ## Copying and pasting
@@ -121,6 +123,7 @@ Every command starts with 'd' (meaning debug), the following letters hint to act
 |`<CTRL>+` | Zoom in|
 |`<CTRL>-` | Zoom out|
 |`%s/what/with_what/gc`| Globally replace and ask for confirmation|
+|`<SHIFT>s`| Construct Find and replace expression|
 |`/search_term`| Search for search_term in file|
 |`set spell spelllang=en_us`| Spell check string |
 |`set nospell`| Disable spell check|
