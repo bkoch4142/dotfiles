@@ -100,6 +100,8 @@ Every command starts with 'd' (meaning debug), the following letters hint to act
 |`,drc` | Run to Cursor  |
 |`,dbp` | Toggle Breakpoint  |
 |`,di` | Inspect Variable  |
+|`,<ENTER>`| Change value in variables|
+|`<DEL>`|Delete watch|
 
 To add variable to watch: go to watch window, go into insert mode and type the name of the variable and hit enter
 
