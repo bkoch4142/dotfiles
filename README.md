@@ -1,40 +1,59 @@
-# Setup 
+# Dotfiles
+- Master branch contains vim configuration without plugins
+- Plugins branch contains vim configuration with plugins
 
-## Installing stow
-Using stow as a symlink manager
-`sudo apt-get install stow`
-
-## Syncing
+## Setup 
+First you need to symlink the files
 ```
+sudo apt-get install stow
 cd ~
 git clone https://github.com/bkoch4142/dotfiles
 cd dotfiles
-stow vim  #make sure files you stow don't already exist
+git checkout plugins
+stow vim 
+```
+Now in order to obtain dependencies described below you can just do
+```
+bash setup.sh
 ```
 
-## Vimspector Setup
-- Config is in .vimspector.json
-- Make sure the python path matches
+## Vim 
+To be able to use all plugins included the Vim 8.2 is needed:
 ```
-vim
-:VimspectorInstall --enable-python
+apt-update
+apt-get install software-properties-common -y
+add-apt-repository ppa:jonathonf/vim -y
+apt update
+apt install vim -y
 ```
 
-## Other
-- if you are on windows terminal disable paste cntrl-v, go to settings and edit settings json, comment out // { "command": "paste", "keys": "ctrl+v" }, <------ THIS LINE
-- if colors not showing maybe its bash fault so add: export TERM=xterm-256color
+## Installing Plugins
+Install the Plug plugin manager  
+`curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`  
+Open vim and type:  
+`:PlugInstall`
 
-## TODO
-- also checkout vim-dirvish (better than netrw)
-- check jupyter vim binding
-- check tpope plugins
-- check fzf
-- check undotree
-- make undodir config
-- lightline
-- python syntax
-- neovim
-- coc.nvim
-- https://www.youtube.com/watch?v=gnupOrSEikQ&feature=emb_title&ab_channel=BenAwad
-- learn the c command for editing everything found
-- image view with xterm and vifm
+## Configure VimSpector Debugger
+To configure vimspector for debugging follow these steps:  
+Open vim and type  
+` VimspectorInstall --enable-python`
+Config is in .vimspector.json make sure the python path matches
+```
+{
+  "configurations": {
+    "Python: Run current script": {
+      "adapter": "debugpy",
+      "configuration": {
+		"type": "python",
+		"stopOnEntry":true,
+		"python":"/usr/bin/python",
+        "request": "launch",
+        "program": "${file}"
+      }
+    }
+  }
+}
+```
+Copy the .vimspector.json file to your project folder
+`cp ~/.vimspector.json project_path`
+
