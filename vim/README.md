@@ -1,4 +1,23 @@
-## Vim - File Operations  
+# Vim 
+
+## Common Operations
+| Command | Description |
+| --- | --- |
+|i| insert before the cursor  |
+|a| append after the cursor  ||
+|I| insert at the beginning of the line  |
+|A| append at the end of the line  |
+|o| open a new line below the current one  |
+|O| open a new line above the current one  |
+|r| replace the one character under your cursor|
+|R| replace the character under your cursor, but just keep typing afterwards  |
+|cm| change whatever you define as a movement (m)  |
+|C| change the current line from where you're at  |
+|ct?| change change up to the question mark  |
+|s| substitute from where you are to the next command (noun)  |
+|S| substitute the entire current line|
+
+## File Operations  
 | Command | Description |
 | --- | --- |
 |`ZQ` | Force Quit  |
@@ -7,8 +26,6 @@
 |`:sort` | sort file  |
 |`:e file`| Edit (open) file |
 |`e src/**/file.txt`| Fuzzy find and open file |
-
-
 
 ## Window Operations  
 | Command | Description |
@@ -42,26 +59,10 @@
 |`gt` | Go to next tab |
 |`gT` | Go to previous tab  |
 
-
-
 ## File Tree
 | Command | Description |
 | --- | --- |
-|`,pv` | Opens file tree to the left|
-
-i: insert before the cursor  
-a: append after the cursor  
-I: insert at the beginning of the line  
-A: append at the end of the line  
-o: open a new line below the current one  
-O: open a new line above the current one  
-r: replace the one character under your cursor
-R: replace the character under your cursor, but just keep typing afterwards  
-cm: change whatever you define as a movement, e.g. a word, or a sentence, or a paragraph.  
-C: change the current line from where you're at  
-ct?: change change up to the question mark  
-s: substitute from where you are to the next command (noun)  
-S: substitute the entire current line  
+|`,pv` | Opens file tree to the left|  
 
 ## Vim - Movements
 | Command | Description |
@@ -106,11 +107,12 @@ Every command starts with 'd' (meaning debug), the following letters hint to act
 To add variable to watch: go to watch window, go into insert mode and type the name of the variable and hit enter
 
 
-
 ## Copying and pasting
--copy paste yank outside of vim
+Copy paste yank outside of vim
+```
  "*y
  "*p
+ ```
 
 ## Other
 | Command | Description |
@@ -127,21 +129,9 @@ To add variable to watch: go to watch window, go into insert mode and type the n
 |`%s/what/with_what/gc`| Globally replace and ask for confirmation|
 |`<SHIFT>s`| Construct Find and replace expression|
 |`/search_term`| Search for search_term in file|
-|`set spell spelllang=en_us`| Spell check string |
+|`set spell spelllang=en_us`| Spell check strings |
 |`set nospell`| Disable spell check|
 
-
-
-
-
-## Comment a block of text
-```
-esc
-ctrl+v
-*go over lines
-shift+i
-*type your comment symbols
-esc
 ```
 
 ###Fix freeze
