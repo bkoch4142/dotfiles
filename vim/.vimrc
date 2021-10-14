@@ -164,6 +164,9 @@ nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
 " Inspect
 nmap <leader>di <Plug>VimspectorBalloonEval
 xmap <leader>di <Plug>VimspectorBalloonEval
+" YCM
+nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <Leader>gf :YcmCompleter Fixit<CR>
 
 " Colorcheme
 colorscheme gruvbox
