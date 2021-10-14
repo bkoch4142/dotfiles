@@ -133,6 +133,10 @@ Copy paste yank outside of vim
 |`set nospell`| Disable spell check|
 
 ```
+## YCM
+- go to definition with ,gd
+- go back with <CTRL>o
+
 
 ###Fix freeze
 ```
