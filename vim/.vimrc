@@ -168,5 +168,21 @@ xmap <leader>di <Plug>VimspectorBalloonEval
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>gf :YcmCompleter Fixit<CR>
 
+
+
+" Solving cpp completes
+" inoremap ( ()<Esc>i
+" inoremap { {}<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+"inoremap [ []<Esc>i
+"inoremap < <><Esc>i
+"inoremap ' ''<Esc>i
+"inoremap " ""<Esc>i
+
+
 " Colorcheme
 colorscheme gruvbox
+
+let g:ycm_global_ycm_extra_conf = '/home/bkoch/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+
