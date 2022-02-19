@@ -167,6 +167,7 @@ xmap <leader>di <Plug>VimspectorBalloonEval
 " YCM
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>gf :YcmCompleter Fixit<CR>
+nnoremap <silent> <Leader>gi :YcmCompleter GetDoc<CR>
 
 " Colorcheme
 colorscheme gruvbox
