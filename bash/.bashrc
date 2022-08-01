@@ -118,14 +118,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bkoch/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/bkoch/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/bkoch/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/bkoch/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/bkoch/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/bkoch/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/bkoch/anaconda3/bin:$PATH"
+        export PATH="/home/bkoch/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -136,3 +136,5 @@ unset __conda_setup
 export TERM=xterm-256color
 alias tmux="TERM=screen-256color-bce tmux"
 
+
+complete -C /usr/bin/terraform terraform

@@ -137,7 +137,8 @@ Plug 'morhetz/gruvbox'
 Plug 'vifm/vifm.vim'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'hashivim/vim-terraform'
+" Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
