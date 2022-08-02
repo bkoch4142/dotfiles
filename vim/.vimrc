@@ -138,7 +138,9 @@ Plug 'vifm/vifm.vim'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'ycm-core/YouCompleteMe'
-
+Plug 'hashivim/vim-terraform'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " vimspector
@@ -179,6 +181,12 @@ inoremap {<CR> {<CR>}<Esc>O
 "inoremap < <><Esc>i
 "inoremap ' ''<Esc>i
 "inoremap " ""<Esc>i
+
+" FZF
+nnoremap <C-p> :Files<CR>
+nnoremap <C-o> :Buffers<CR>
+nnoremap <C-g> :GFiles<CR>
+nnoremap <C-f> :Rg
 
 
 " Colorcheme
