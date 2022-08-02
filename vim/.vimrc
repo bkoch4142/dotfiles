@@ -138,12 +138,15 @@ Plug 'vifm/vifm.vim'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'hashivim/vim-terraform'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'hashivim/vim-terraform'
+" Plug 'vim-syntastic/syntastic'
+" Plug 'juliosueiras/vim-terraform-completion'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
-" vimspector
+" VIMSPECTOR
 let g:vimspector_enable_mappings = 'HUMAN'
 
 " Maximizes a vim window 
@@ -166,12 +169,23 @@ nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
 " Inspect
 nmap <leader>di <Plug>VimspectorBalloonEval
 xmap <leader>di <Plug>VimspectorBalloonEval
+
 " YCM
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>gf :YcmCompleter Fixit<CR>
 nnoremap <silent> <Leader>gi :YcmCompleter GetDoc<CR>
 
-
+" LIGHTLINE
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 " Solving cpp completes
 " inoremap ( ()<Esc>i
@@ -183,13 +197,12 @@ inoremap {<CR> {<CR>}<Esc>O
 "inoremap " ""<Esc>i
 
 " FZF
-nnoremap <C-p> :Files<CR>
-nnoremap <C-o> :Buffers<CR>
-nnoremap <C-g> :GFiles<CR>
-nnoremap <C-f> :Rg
+nnoremap <leader>p :Files<CR>
+nnoremap <leader>o :Buffers<CR>
+nnoremap <leader>g :GFiles<CR>
+nnoremap <leader>f :Rg<CR>
 
-
-" Colorcheme
+" COLORSCHEME
 colorscheme gruvbox
 
 let g:ycm_global_ycm_extra_conf = '/home/bkoch/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
