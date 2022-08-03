@@ -23,3 +23,9 @@ stow vim
 
 # add color option in bash (should be set in .bashrc)
 export TERM=xterm-256color
+
+# For ycm you need to do this in plugin dict
+# CC=gcc-8 CXX=g++-8 python3 ./install.py
+
+# Might need to also download dos2unix and do for the dotfiles and ~/.vim directory:
+# find . -type f -print0 | xargs -0 dos2unix
