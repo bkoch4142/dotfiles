@@ -8,6 +8,9 @@ apt update
 apt install vim -y
 
 # For fzf and ripgrep
+# if you are on lower than ubuntu 20 than go to ripgrep github release page
+# then download the .deb pkg
+# then sudo dpkg -i that_pkg
 apt-get install ripgrep
 
 # Add Plug plugin manager
