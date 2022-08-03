@@ -24,7 +24,7 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR> " Opens fil
 set splitbelow " Makes windows open below and not up
 
 " Terminal
-map <leader>tt :vnew terminal<CR>
+" map <leader>tt :vnew terminal<CR>
 
 " Remap arrow keys to resize window
 nnoremap <Up>    :resize -2<CR>
@@ -199,7 +199,7 @@ inoremap {<CR> {<CR>}<Esc>O
 " FZF
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>o :Buffers<CR>
-nnoremap <leader>g :GFiles<CR>
+nnoremap <leader>t :GFiles<CR>
 nnoremap <leader>f :Rg<CR>
 
 " COLORSCHEME
