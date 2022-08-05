@@ -84,7 +84,7 @@ map 0 ^
 "map jj to esc 
 imap jj <Esc>
 
-"map ReplaceAll to S
+"map ReplaceAll to S 
 nnoremap S :%s//g<Left><Left>
 
 " To aid in pasting text from outside vim toggle set paste
@@ -123,6 +123,11 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ }
+
+" For replacing occurences visually selected text
+" Select text and press Cntrl r
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 
 " For Mac/Linux users
 call plug#begin('~/.vim/bundle')
