@@ -20,7 +20,7 @@ nnoremap <C-h> <C-w>h " Remap window change to Ctrl+movement_key
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR> " Opens file explorer with pv
+" nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR> " Opens file explorer with pv
 set splitbelow " Makes windows open below and not up
 
 " Terminal
@@ -149,17 +149,13 @@ Plug 'hashivim/vim-terraform'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'juliosueiras/vim-terraform-completion'
 Plug 'tpope/vim-fugitive'
-
-" If you don't have nodejs and yarn
-" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
-" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
-" If you have nodejs and yarn
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'ferrine/md-img-paste.vim'
 
 call plug#end()
 
+" VIM MARKDOWN PASTE IMG
+autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
 
 " VIM MARKDOWN
 nmap <C-s> <Plug>MarkdownPreview

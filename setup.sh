@@ -6,6 +6,7 @@ apt-get install software-properties-common -y
 add-apt-repository ppa:jonathonf/vim -y
 apt update
 apt install vim -y
+apt install xclip
 
 # For fzf and ripgrep
 # if you are on lower than ubuntu 20 than go to ripgrep github release page
