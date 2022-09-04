@@ -142,14 +142,29 @@ Plug 'morhetz/gruvbox'
 Plug 'vifm/vifm.vim'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'hashivim/vim-terraform'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'juliosueiras/vim-terraform-completion'
 Plug 'tpope/vim-fugitive'
+
+" If you don't have nodejs and yarn
+" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
+" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" If you have nodejs and yarn
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
 call plug#end()
+
+
+" VIM MARKDOWN
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " VIMSPECTOR
 let g:vimspector_enable_mappings = 'HUMAN'
