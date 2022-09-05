@@ -1,6 +1,4 @@
 # Dotfiles
-- Master branch contains vim configuration without plugins
-- Plugins branch contains vim configuration with plugins
 
 ## Setup 
 First you need to symlink the files
@@ -10,28 +8,16 @@ cd ~
 git clone https://github.com/bkoch4142/dotfiles
 cd dotfiles
 git checkout plugins
-stow vim 
 ```
 Now in order to obtain dependencies described below you can just do
 ```
 bash setup.sh
 ```
-
-## Vim 
-To be able to use all plugins included the Vim 8.2 is needed:
+Now open vim and do 
 ```
-apt-update
-apt-get install software-properties-common -y
-add-apt-repository ppa:jonathonf/vim -y
-apt update
-apt install vim -y
+:PlugInstall
 ```
 
-## Installing Plugins
-Install the Plug plugin manager  
-`curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`  
-Open vim and type:  
-`:PlugInstall`
 
 ## Configure VimSpector Debugger
 To configure vimspector for debugging follow these steps:  
