@@ -120,6 +120,10 @@ To add variable to watch: go to watch window, go into insert mode and type the n
 |`:Gvdiffsplit`| vertical diff from previous commit |
 |`:Gvdiffsplit main` | vertical diff split from branch|
 | `:Gvdiffsplit!` | when in file to merge|
+|`]c`| in merge to jump to next |
+|`d2o`| accept from left window |
+|`:d3o` | accept from right window|
+| `:Gvdiffsplit!` | when in file to merge|
 
 ## Copying and pasting
 Copy paste yank outside of vim
