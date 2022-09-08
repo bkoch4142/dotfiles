@@ -4,6 +4,10 @@ let mapleader = ","
 " set line numbers
 set nu
 
+" Keep cursor centered
+set so=999
+
+
 " Fast saving
 nmap <leader>w :w!<cr>
 
