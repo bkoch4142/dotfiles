@@ -106,6 +106,24 @@ Every command starts with 'd' (meaning debug), the following letters hint to act
 
 To add variable to watch: go to watch window, go into insert mode and type the name of the variable and hit enter
 
+## Vim Fugative
+| Command | Description |
+| --- | --- |
+|`:G`| Open vim fugative|
+|`g?`| Help |
+|`s`| Stage file|
+|`u` | Unstage file|
+|`=` | Toggle inline diff|
+|`dv`| Toggle vertical diff, to quit dq|
+|`X`| Delete change on unstaged file|
+|`cc`| commit|
+|`:Gvdiffsplit`| vertical diff from previous commit |
+|`:Gvdiffsplit main` | vertical diff split from branch|
+| `:Gvdiffsplit!` | when in file to merge|
+|`]c`| in merge to jump to next |
+|`d2o`| accept from left window |
+|`:d3o` | accept from right window|
+| `:Gvdiffsplit!` | when in file to merge|
 
 ## Copying and pasting
 Copy paste yank outside of vim
