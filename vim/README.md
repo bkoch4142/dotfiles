@@ -11,6 +11,7 @@
 |O| open a new line above the current one  |
 |r| replace the one character under your cursor|
 |R| replace the character under your cursor, but just keep typing afterwards  |
+|select and Cntrl R| you will be prompted to enter text to replace with. Press enter and then confirm each change you agree with y or decline with n|
 |cm| change whatever you define as a movement (m)  |
 |C| change the current line from where you're at  |
 |ct?| change change up to the question mark  |
